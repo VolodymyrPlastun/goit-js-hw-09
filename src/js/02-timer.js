@@ -35,10 +35,8 @@ startBtn.addEventListener('click', () => {
                 const startTime = Date.now();
                 const curretTime = new Date(timeInput.value);
         const finalTime = curretTime - startTime;
-        console.log(finalTime);
                 const time = convertMs(finalTime);
 
-        // останавливается на -1
                  if (finalTime < 0) {
                      clearInterval(intervalId);
                      return;
@@ -46,7 +44,6 @@ startBtn.addEventListener('click', () => {
         updateTime(time);
     }, 1000);
    
-        // }
 })
 
 function convertMs(ms) {
